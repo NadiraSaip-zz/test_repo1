@@ -1,0 +1,10 @@
+--- 
+- name: Install telnet
+  hosts: all
+  tasks: 
+    - name: Install on centos
+      when: ansible_os_family == "Red Hat"
+      packages: 
+        name: telnet
+        state: present
+        
